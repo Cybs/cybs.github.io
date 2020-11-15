@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-13T06:57:19.826Z</updated>
+  <updated>2020-11-15T07:09:25.845Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,58 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>testttttttttt</title>
-    <link href="http://example.com/2020/11/13/test/"/>
-    <id>http://example.com/2020/11/13/test/</id>
-    <published>2020-11-13T06:45:50.000Z</published>
-    <updated>2020-11-13T06:57:19.826Z</updated>
+    <title>我又开始写博客了</title>
+    <link href="http://example.com/2020/11/15/my-first-hexo-blog/"/>
+    <id>http://example.com/2020/11/15/my-first-hexo-blog/</id>
+    <published>2020-11-14T16:40:00.000Z</published>
+    <updated>2020-11-15T07:09:25.845Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;标题-1&quot;&gt;&lt;a href=&quot;#标题-1&quot; class=&quot;headerlink&quot; title=&quot;标题 1&quot;&gt;&lt;/a&gt;标题 1&lt;/h1&gt;&lt;h2 id=&quot;标题-2&quot;&gt;&lt;a href=&quot;#标题-2&quot; class=&quot;headerlink&quot; title=&quot;标题</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;如果你看到这篇文章，欢迎你，这篇是我这个个人博客的第一篇，可谓“开山之作”。关于我，你可以看看我这里的&lt;a</summary>
         
       
     
     
     
-    <category term="Diary" scheme="http://example.com/categories/Diary/"/>
-    
-    <category term="PlayStation" scheme="http://example.com/categories/Diary/PlayStation/"/>
-    
-    <category term="Games" scheme="http://example.com/categories/Diary/Games/"/>
-    
-    <category term="Life" scheme="http://example.com/categories/Life/"/>
+    <category term="随笔" scheme="http://example.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="测试1" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%951/"/>
+    <category term="写作" scheme="http://example.com/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="测试2" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%952/"/>
+    <category term="个人" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-    <category term="测试3" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%953/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2020/11/13/hello-world/"/>
-    <id>http://example.com/2020/11/13/hello-world/</id>
-    <published>2020-11-12T17:04:03.733Z</published>
-    <updated>2020-11-12T17:04:03.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
+    <category term="生活" scheme="http://example.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
