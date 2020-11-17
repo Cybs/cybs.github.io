@@ -214,6 +214,7 @@ var _hmt = _hmt || [];
 <p>总体而言，就是购买域名时尽量货比三家，选择性价比最高的。</p>
 <h2 id="https-证书"><a href="#https-证书" class="headerlink" title="https 证书"></a>https 证书</h2><p>虽然 https 并不是必须，但是目前的浏览器和搜索引擎对它都有要求，所以建议配置一下。有些服务商证书需要单独购买的，我是购买域名送了一年。当然还有一些免费方案，这个我就没有去折腾，也没必要。</p>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>关于 DNS 解析配置，这里再说明一下，目前网上的大部分文章关于 Coding 的自定义域名解析都是旧版的，新版的基本看不到，具体有需要的可以查看这份<a target="_blank" rel="noopener" href="https://help.coding.net/docs/pages/operating/customize.html?_ga=2.259624522.1321409696.1605425217-369513857.1605198400#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">官方文档</a>。需要注意的是，网上文章大部分的 CNAME 配置是直接用网站地址，但是新版的配置系统已经有指定域名地址，需要使用 *.cdn.dnsv1.com 的地址。这个地址是自定义域名指向 DNS 的地址，直接访问是没有内容的。</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>我们的网站会有带www二级域名和不带www的顶级域名，这个提现在统计数据来源上，并且对于搜索引擎而言，它会认为这是两个不同的地址，但明显这不是我们希望看到的。这里我们需要用到301跳转，以保证两个地址都是指向同一内容。</p>
 <h2 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a>CNAME 文件</h2><p>网上很多文章介绍说 GitHub 需要添加一个 CNAME 文件，内容是域名。其实这个是不需要的，<a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方的文档</a>很清楚说明</p>
 <blockquote>
 <p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
