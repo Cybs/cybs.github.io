@@ -96,6 +96,7 @@
 
 <div class="notice" style="margin-top:50px">
     <i class="ri-heart-fill"></i>
+    <span>「一言」：</span>
     <div class="notice-content" id="broad"></div>
 </div>
 <script type="text/javascript">
@@ -140,6 +141,89 @@
     
     
     <article
+  id="post-building-hexo-blog"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/11/17/building-hexo-blog/"
+    >hexo 建站记录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/11/17/building-hexo-blog/" class="article-date">
+  <time datetime="2020-11-17T02:36:37.000Z" itemprop="datePublished">2020-11-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>你现在看到的这个 blog 是用 Hexo 框架进行搭建的，今天给大家总结一下建站过程中的一些关键点。</p>
+<p>关于用 Hexo 建立博客，搜索一下，你会看到各种详尽的说明分享，我也是通过这种方式来搭建起来这个博客的，所以这里我不打算 step by step 地来介绍如何利用 Hexo 来建立个人博客，有需要的童鞋自行搜索即可。</p>
+<p>这里我主要想总结和记录一下过程中遇到的一些坑或者心得，虽然90%的过程我们根据网上的分享一步步走可以完成，但总会遇到一些特殊的问题点卡你一下，而这些往往是解决问题的关键。</p>
+<h1 id="选择-Hexo"><a href="#选择-Hexo" class="headerlink" title="选择 Hexo"></a>选择 Hexo</h1><p>搭建博客的框架很多，有动态服务器的也有静态文件的，最开始是打算用 Wordpress 的，但花点时间对比一下后，还是选择了 Hexo。以下是我比较关注的点：</p>
+<h2 id="轻量化"><a href="#轻量化" class="headerlink" title="轻量化"></a>轻量化</h2><p>Wordpress 确实功能强大，但是我建立这个博客的核心诉求只是记录一些文字，并不需要它强大的功能和插件系统。</p>
+<p>Hexo 纯静态文件部署，无需搭建服务器，成本很低，如果连域名都不需要的话，可以免费实现。</p>
+<h2 id="专注"><a href="#专注" class="headerlink" title="专注"></a>专注</h2><p>复杂的框架会分散注意力，让人耗费额外的精力，Hexo 则比较纯粹。</p>
+<p>很多搞技术的人做博客容易落入一个怪圈，就是把注意力落在了博客的主题、插件等额外的东西上。当然这个并不能说是一个问题，跟初衷有关。我一开始便一直提醒自己，要把重点放在输出内容上，在博客选型和搭建上，要速战速决，不能耗费过多时间。而实际过程中，虽然一直有这个“初心”的鞭策，我也还差点被主题、插件等吸引了，差点就迷路。。</p>
+<p>Markdown 也是我选择的一个原因。传统所见即所得的编辑器有时会让人消耗额外的精力，Markdown 则让人更专注，我平时都有使用它的习惯。虽然很多框架也有支持 Markdown，但是还是比较重，Hexo 直接就是一个 md 文件，配合 Typora 编辑器和 PicGo 可以很高效率的实现写作、图床、一条龙。</p>
+<h2 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h2><p>关于这个可能有点因人而异，对于普通用户，Hexo 不算特别友好，但是对于前端程序猿而言，确实十分友好的，起码对于我而言，这个算是很容易上手的。基于 Nodejs 的静态化框架，这个以前在项目中就搞过，所以没有学习成本</p>
+<h1 id="平台选择"><a href="#平台选择" class="headerlink" title="平台选择"></a>平台选择</h1><p>理论上，任何一台可以放置静态文件的服务器都可以部署，而目前主流的方案是利用 GitHub 和 Coding 的静态网站服务。当然如果你有自己的专门 VPS，那就更好了，但是上述两个平台已经够用，还免费。再利用 CDN 加速可以达到较好用户体验。</p>
+<p>考虑到境内和境外的网络环境差异，我是选用的 Github + Coding 双线部署方案，能同时兼顾不同的网络环境，具体的配置关键就是 DNS 解析部分，这个通过搜索可以找到答案。</p>
+<h2 id="验证效果"><a href="#验证效果" class="headerlink" title="验证效果"></a>验证效果</h2><p>在我们配置了双线部署后，如何验证效果呢？我用了两个方法：</p>
+<ol>
+<li>在<a target="_blank" rel="noopener" href="https://tool.chinaz.com/sitespeed">站长工具网站</a>上分别用“国内网速测试”和“海外网速测试”来验证解析速度和IP等。</li>
+<li>利用科学上网工具，分别测试对域名进行翻墙和不翻墙时的效果，因为工具是用海外的服务器的，如果不是直接访问，则会走 GitHub 的域名解析路径。</li>
+</ol>
+<h1 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h1><h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>如果需要自定义域名的话，需要购买域名，目前国内主流是阿里云和腾讯云等大厂，国外的也可以，这个并没有明显优劣之分。但是差异倒是不少，例如我这个 <a href="https://cybs.site/">cybs.site</a> 的域名，我对比了阿里云、腾讯云和 Godaddy，发现价格还是相差挺大的，其中腾讯云的包年10年价格还比阿里云的少20元，总体各个梯度的价格也是低一些的，所以最后我是在腾讯云上买了个5年的套餐。</p>
+<p>总体而言，就是购买域名时尽量货比三家，选择性价比最高的。</p>
+<h2 id="https-证书"><a href="#https-证书" class="headerlink" title="https 证书"></a>https 证书</h2><p>虽然 https 并不是必须，但是目前的浏览器和搜索引擎对它都有要求，所以建议配置一下。有些服务商证书需要单独购买的，我是购买域名送了一年。当然还有一些免费方案，这个我就没有去折腾，也没必要。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>关于 DNS 解析配置，这里再说明一下，目前网上的大部分文章关于 Coding 的自定义域名解析都是旧版的，新版的基本看不到，具体有需要的可以查看这份<a target="_blank" rel="noopener" href="https://help.coding.net/docs/pages/operating/customize.html?_ga=2.259624522.1321409696.1605425217-369513857.1605198400#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">官方文档</a>。需要注意的是，网上文章大部分的 CNAME 配置是直接用网站地址，但是新版的配置系统已经有指定域名地址，需要使用 *.cdn.dnsv1.com 的地址。这个地址是自定义域名指向 DNS 的地址，直接访问是没有内容的。</p>
+<h2 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a>CNAME 文件</h2><p>网上很多文章介绍说 GitHub 需要添加一个 CNAME 文件，内容是域名。其实这个是不需要的，<a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方的文档</a>很清楚说明</p>
+<blockquote>
+<p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
+</blockquote>
+<p>就是这个文件会在你点击保存域名配置时自动生成的，而我实践过程中发现也确实如此。所以，网上文章虽然有用，但是官方文档最权威，建议多看官方文档。</p>
+<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>静态资源文件，使用 CDN 进行访问加速是非常有效的方案。</p>
+<h2 id="缓存刷新"><a href="#缓存刷新" class="headerlink" title="缓存刷新"></a>缓存刷新</h2><p>我首次更新部署网站时，内容正常访问的，更新内容发布后，GitHub 版本的内容可以看到更新，但是自定义域名的国内线路版本一直无法更新，无论是强制清浏览器缓存还是重新部署都无解。后来我发现原来腾讯云买的域名部署后默认给我开通了 CDN 试用，免费6个月，每月30G。再看一下配置后台，所有的文件统一配置成了30天过期，难怪一直更新不了，原来是30天后才过期，汗😓。</p>
+<p>首先我按照缓存刷新的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/6299">文档</a>，将 DNS 的缓存清除，随之就看到了内容的更新。我又按照缓存配置的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/41540">文档</a>，将首页index.html过期时间调到5分钟，其它静态文件一天，这样基本就能兼顾内容刷新和缓存加速的需求了。</p>
+<h2 id="jsdelivr"><a href="#jsdelivr" class="headerlink" title="jsdelivr"></a>jsdelivr</h2><p>以上是腾讯云的 CDN 配置使用，但是大部分人需要免费方案，jsdelivr 就是其中一个，教程可以搜索查看。目前在我自己还没启用，主要原因是有送的腾讯云 CDN 还能用，另外它需要结合 GitHub 仓库使用，这个我不确定以后会不会有风险，先观察一段时间。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>暂时遇到和想到的有以上这些点，后续有补充再更新，如果你在使用 Hexo 过程中有哪些疑问或者体会，欢迎进行交流。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E7%9B%98/" rel="tag">复盘</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-my-first-hexo-blog"
   class="article article-type-post"
   itemscope
@@ -171,19 +255,19 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你看到这篇文章，欢迎你，这篇是我这个个人博客的第一篇，可谓“开山之作”。关于我，你可以看看我这里的<a href="/about/">介绍</a>。</p>
-<p>现在已经是2020年了，博客这个互联网的老人已经没有以前那么受欢迎，随着各种自媒体平台的兴起，例如公众号、头条、知乎等，已经成为大部分人写作的平台。</p>
+<p>现在已经是2020年了，博客这个互联网的老人已经没有以前那么受欢迎。各种自媒体平台的兴起，例如公众号、头条、知乎等，已经成为大部分人写作的平台。</p>
 <p>但是个人博客依然有它存在的理由和必要性。</p>
 <p>首先，博客更加个性化，尤其是自建的博客，你可以随心所欲（在法律允许前提下），不用受平台的各种规则限制。</p>
-<p>其次，博客更开放，互联网的一个重要载体就是网站，它比App生态更加开放自由，这里能包容更多内容。</p>
+<p>其次，博客更开放，互联网的一个重要载体就是网站，它比App生态更加开放自由，这里能包容更多内容，对搜索引擎也更加友好。</p>
 <p>曾经在十多年前，那时候我还在念大学，那时候博客非常流行，我也有一个自己的博客，建立在msn space上，如今，这个平台早已消失，我曾经努力码的字和添加的图片等内容已经成为了互联网的历史尘埃。</p>
 <p>在后来，我也有间断性地写一些内容，也有在公众号和知乎、头条等平台创作，但是一直没有做一个博客。</p>
 <p>最近几天，受到一些启发，我感觉除了在自媒体平台上创作外，还应该有自己的一片自留地，所以，我花了差不多一天的零碎时间搞了这个博客，希望能持续创作下去。如果这里的文章对你有帮助或者让你觉得有意思，欢迎关注我（网站左下角订阅RSS，或者在我介绍页里关注我公众号，大部分内容同步更新）。</p>
 <h1 id="关于写作"><a href="#关于写作" class="headerlink" title="关于写作"></a>关于写作</h1><p>关于写作，我觉得它是一件很有意义的事。</p>
 <p>写作有很多作用，它可以记录、抒发、思考、传播。</p>
-<p>多年前，我写博客，主要是当成日记来写，多是一些生活记录或者小思考小情绪。</p>
+<p>以前，我写博客，主要是当成日记来写，多是一些生活记录或者小思考小情绪。</p>
 <p>随着认知的改变，我发现写作是一件值得长期投资的事。写作是有时间复利的。</p>
 <p>人性大多数时候是懒惰的，一思考就会觉得累，所以正常情况下，人是更加偏好于不思考，喜欢轻松。</p>
-<p>而写作偏偏是需要大脑的综合运转，需要大脑的思考整合输出，这个过程是痛苦的，但是结果却是能让你的认知提升。</p>
+<p>而写作偏偏是需要大脑的综合运转，需要大脑的思考整合输出，这个过程是痛苦的，但是宝剑锋从磨砺出。</p>
 <p>有句话叫</p>
 <blockquote>
 <p>输出倒逼输入</p>
@@ -195,9 +279,15 @@
 <p>以上就是我从“功利”的角度来认识写作的思考。</p>
 <p>但是，更重要的是，开始写，坚持写。</p>
 <p>不用一开始就逼自己写出多有价值的内容，只要开始写，开始记录，就有意义。</p>
-<p>我们不是作家，也不用做名人，也许，纯粹用文字表达和记录一下自己，也是很有意思的一件事。</p>
-<h1 id="hexo建站的心得感受"><a href="#hexo建站的心得感受" class="headerlink" title="hexo建站的心得感受"></a>hexo建站的心得感受</h1><p>作为开篇，更好由用hexo完成了建站的过程，有些热乎的经验和心得想记录一下，这个标题我都想好了，但开始动笔时，发现和本篇文章风格有点不符，就点到为止。</p>
-<p>关于这个话题，后面再专门写一篇来记录吧。</p>
+<p>我们不是作家，也不奢望做名人，也许，纯粹用文字表达和记录一下自己，也是很有意思的一件事。</p>
+<h1 id="hexo建站的心得感受"><a href="#hexo建站的心得感受" class="headerlink" title="hexo建站的心得感受"></a>hexo建站的心得感受</h1><p>作为开篇，刚好是用hexo完成了建站的过程，有些热乎的经验和心得想记录一下，这个小标题我都想好了，但开始动笔时，发现和本篇文章风格有点不符，就点到为止。</p>
+<p>关于这个话题，后面再专门写<a href="/2020/11/17/building-hexo-blog/">一篇</a>来记录吧。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>有缘能进入这个博客，如果喜欢，可以关注一下。</p>
+<ul>
+<li>你可以订阅RSS（网站左下角）</li>
+<li>在<a href="/about/">介绍页面</a>联系我</li>
+<li>如果你也有一个博客或者网站，可以<a href="/friends/">交换链接</a>哦</li>
+</ul>
  
       <!-- reward -->
       
@@ -305,7 +395,15 @@
     </li>
     
     <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
       <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/messages">留言板</a>
     </li>
     
   </ul>

@@ -3,11 +3,11 @@
   <title>Cybs的博客</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://cybs.site/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2020-11-15T07:09:25.845Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://cybs.site/"/>
+  <updated>2020-11-17T08:09:24.287Z</updated>
+  <id>https://cybs.site/</id>
   
   <author>
     <name>Cybs</name>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo 建站记录</title>
+    <link href="https://cybs.site/2020/11/17/building-hexo-blog/"/>
+    <id>https://cybs.site/2020/11/17/building-hexo-blog/</id>
+    <published>2020-11-17T02:36:37.000Z</published>
+    <updated>2020-11-17T08:09:24.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;你现在看到的这个 blog 是用 Hexo 框架进行搭建的，今天给大家总结一下建站过程中的一些关键点。&lt;/p&gt;
+&lt;p&gt;关于用 Hexo</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://cybs.site/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="hexo" scheme="https://cybs.site/tags/hexo/"/>
+    
+    <category term="复盘" scheme="https://cybs.site/tags/%E5%A4%8D%E7%9B%98/"/>
+    
+    <category term="心得" scheme="https://cybs.site/tags/%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我又开始写博客了</title>
-    <link href="http://example.com/2020/11/15/my-first-hexo-blog/"/>
-    <id>http://example.com/2020/11/15/my-first-hexo-blog/</id>
+    <link href="https://cybs.site/2020/11/15/my-first-hexo-blog/"/>
+    <id>https://cybs.site/2020/11/15/my-first-hexo-blog/</id>
     <published>2020-11-14T16:40:00.000Z</published>
-    <updated>2020-11-15T07:09:25.845Z</updated>
+    <updated>2020-11-17T02:38:48.352Z</updated>
     
     
       
@@ -34,14 +64,14 @@
     
     
     
-    <category term="随笔" scheme="http://example.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://cybs.site/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="写作" scheme="http://example.com/tags/%E5%86%99%E4%BD%9C/"/>
+    <category term="写作" scheme="https://cybs.site/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="个人" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="个人" scheme="https://cybs.site/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-    <category term="生活" scheme="http://example.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://cybs.site/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
