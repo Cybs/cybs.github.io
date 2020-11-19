@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo 建站记录</title>
-    <url>/2020/11/17/building-hexo-blog/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>你现在看到的这个 blog 是用 Hexo 框架进行搭建的，今天给大家总结一下建站过程中的一些关键点。</p>
-<p>关于用 Hexo 建立博客，搜索一下，你会看到各种详尽的说明分享，我也是通过这种方式来搭建起来这个博客的，所以这里我不打算 step by step 地来介绍如何利用 Hexo 来建立个人博客，有需要的童鞋自行搜索即可。</p>
-<p>这里我主要想总结和记录一下过程中遇到的一些坑或者心得，虽然90%的过程我们根据网上的分享一步步走可以完成，但总会遇到一些特殊的问题点卡你一下，而这些往往是解决问题的关键。</p>
-<h1 id="选择-Hexo"><a href="#选择-Hexo" class="headerlink" title="选择 Hexo"></a>选择 Hexo</h1><p>搭建博客的框架很多，有动态服务器的也有静态文件的，最开始是打算用 Wordpress 的，但花点时间对比一下后，还是选择了 Hexo。以下是我比较关注的点：</p>
-<h2 id="轻量化"><a href="#轻量化" class="headerlink" title="轻量化"></a>轻量化</h2><p>Wordpress 确实功能强大，但是我建立这个博客的核心诉求只是记录一些文字，并不需要它强大的功能和插件系统。</p>
-<p>Hexo 纯静态文件部署，无需搭建服务器，成本很低，如果连域名都不需要的话，可以免费实现。</p>
-<h2 id="专注"><a href="#专注" class="headerlink" title="专注"></a>专注</h2><p>复杂的框架会分散注意力，让人耗费额外的精力，Hexo 则比较纯粹。</p>
-<p>很多搞技术的人做博客容易落入一个怪圈，就是把注意力落在了博客的主题、插件等额外的东西上。当然这个并不能说是一个问题，跟初衷有关。我一开始便一直提醒自己，要把重点放在输出内容上，在博客选型和搭建上，要速战速决，不能耗费过多时间。而实际过程中，虽然一直有这个“初心”的鞭策，我也还差点被主题、插件等吸引了，差点就迷路。。</p>
-<p>Markdown 也是我选择的一个原因。传统所见即所得的编辑器有时会让人消耗额外的精力，Markdown 则让人更专注，我平时都有使用它的习惯。虽然很多框架也有支持 Markdown，但是还是比较重，Hexo 直接就是一个 md 文件，配合 Typora 编辑器和 PicGo 可以很高效率的实现写作、图床、一条龙。</p>
-<h2 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h2><p>关于这个可能有点因人而异，对于普通用户，Hexo 不算特别友好，但是对于前端程序猿而言，确实十分友好的，起码对于我而言，这个算是很容易上手的。基于 Nodejs 的静态化框架，这个以前在项目中就搞过，所以没有学习成本</p>
-<h1 id="平台选择"><a href="#平台选择" class="headerlink" title="平台选择"></a>平台选择</h1><p>理论上，任何一台可以放置静态文件的服务器都可以部署，而目前主流的方案是利用 GitHub 和 Coding 的静态网站服务。当然如果你有自己的专门 VPS，那就更好了，但是上述两个平台已经够用，还免费。再利用 CDN 加速可以达到较好用户体验。</p>
-<p>考虑到境内和境外的网络环境差异，我是选用的 Github + Coding 双线部署方案，能同时兼顾不同的网络环境，具体的配置关键就是 DNS 解析部分，这个通过搜索可以找到答案。</p>
-<h2 id="验证效果"><a href="#验证效果" class="headerlink" title="验证效果"></a>验证效果</h2><p>在我们配置了双线部署后，如何验证效果呢？我用了两个方法：</p>
-<ol>
-<li>在<a href="https://tool.chinaz.com/sitespeed">站长工具网站</a>上分别用“国内网速测试”和“海外网速测试”来验证解析速度和IP等。</li>
-<li>利用科学上网工具，分别测试对域名进行翻墙和不翻墙时的效果，因为工具是用海外的服务器的，如果不是直接访问，则会走 GitHub 的域名解析路径。</li>
-</ol>
-<h1 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h1><h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>如果需要自定义域名的话，需要购买域名，目前国内主流是阿里云和腾讯云等大厂，国外的也可以，这个并没有明显优劣之分。但是差异倒是不少，例如我这个 <a href="https://cybs.site/">cybs.site</a> 的域名，我对比了阿里云、腾讯云和 Godaddy，发现价格还是相差挺大的，其中腾讯云的包年10年价格还比阿里云的少20元，总体各个梯度的价格也是低一些的，所以最后我是在腾讯云上买了个5年的套餐。</p>
-<p>总体而言，就是购买域名时尽量货比三家，选择性价比最高的。</p>
-<h2 id="https-证书"><a href="#https-证书" class="headerlink" title="https 证书"></a>https 证书</h2><p>虽然 https 并不是必须，但是目前的浏览器和搜索引擎对它都有要求，所以建议配置一下。有些服务商证书需要单独购买的，我是购买域名送了一年。当然还有一些免费方案，这个我就没有去折腾，也没必要。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>关于 DNS 解析配置，这里再说明一下，目前网上的大部分文章关于 Coding 的自定义域名解析都是旧版的，新版的基本看不到，具体有需要的可以查看这份<a href="https://help.coding.net/docs/pages/operating/customize.html?_ga=2.259624522.1321409696.1605425217-369513857.1605198400#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">官方文档</a>。需要注意的是，网上文章大部分的 CNAME 配置是直接用网站地址，但是新版的配置系统已经有指定域名地址，需要使用 *.cdn.dnsv1.com 的地址。这个地址是自定义域名指向 DNS 的地址，直接访问是没有内容的。</p>
-<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>我们的网站会有带www二级域名和不带www的顶级域名，这个提现在统计数据来源上，并且对于搜索引擎而言，它会认为这是两个不同的地址，但明显这不是我们希望看到的。这里我们需要用到301跳转，以保证两个地址都是指向同一内容。</p>
-<h2 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a>CNAME 文件</h2><p>网上很多文章介绍说 GitHub 需要添加一个 CNAME 文件，内容是域名。其实这个是不需要的，<a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方的文档</a>很清楚说明</p>
-<blockquote>
-<p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
-</blockquote>
-<p>就是这个文件会在你点击保存域名配置时自动生成的，而我实践过程中发现也确实如此。所以，网上文章虽然有用，但是官方文档最权威，建议多看官方文档。</p>
-<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>静态资源文件，使用 CDN 进行访问加速是非常有效的方案。</p>
-<h2 id="缓存刷新"><a href="#缓存刷新" class="headerlink" title="缓存刷新"></a>缓存刷新</h2><p>我首次更新部署网站时，内容正常访问的，更新内容发布后，GitHub 版本的内容可以看到更新，但是自定义域名的国内线路版本一直无法更新，无论是强制清浏览器缓存还是重新部署都无解。后来我发现原来腾讯云买的域名部署后默认给我开通了 CDN 试用，免费6个月，每月30G。再看一下配置后台，所有的文件统一配置成了30天过期，难怪一直更新不了，原来是30天后才过期，汗😓。</p>
-<p>首先我按照缓存刷新的<a href="https://cloud.tencent.com/document/product/228/6299">文档</a>，将 DNS 的缓存清除，随之就看到了内容的更新。我又按照缓存配置的<a href="https://cloud.tencent.com/document/product/228/41540">文档</a>，将首页index.html过期时间调到5分钟，其它静态文件一天，这样基本就能兼顾内容刷新和缓存加速的需求了。</p>
-<h2 id="jsdelivr"><a href="#jsdelivr" class="headerlink" title="jsdelivr"></a>jsdelivr</h2><p>以上是腾讯云的 CDN 配置使用，但是大部分人需要免费方案，jsdelivr 就是其中一个，教程可以搜索查看。目前在我自己还没启用，主要原因是有送的腾讯云 CDN 还能用，另外它需要结合 GitHub 仓库使用，这个我不确定以后会不会有风险，先观察一段时间。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>暂时遇到和想到的有以上这些点，后续有补充再更新，如果你在使用 Hexo 过程中有哪些疑问或者体会，欢迎进行交流。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>复盘</tag>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我又开始写博客了</title>
     <url>/2020/11/15/my-first-hexo-blog/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你看到这篇文章，欢迎你，这篇是我这个个人博客的第一篇，可谓“开山之作”。关于我，你可以看看我这里的<a href="/about/">介绍</a>。</p>
@@ -90,6 +45,52 @@
         <tag>写作</tag>
         <tag>个人</tag>
         <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 建站记录</title>
+    <url>/2020/11/17/building-hexo-blog/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>你现在看到的这个 blog 是用 Hexo 框架进行搭建的，今天给大家总结一下建站过程中的一些关键点。</p>
+<p>关于用 Hexo 建立博客，搜索一下，你会看到各种详尽的说明分享，我也是通过这种方式来搭建起来这个博客的，所以这里我不打算 step by step 地来介绍如何利用 Hexo 来建立个人博客，有需要的童鞋自行搜索即可。</p>
+<p>这里我主要想总结和记录一下过程中遇到的一些坑或者心得，虽然90%的过程我们根据网上的分享一步步走可以完成，但总会遇到一些特殊的问题点卡你一下，而这些往往是解决问题的关键。</p>
+<h1 id="选择-Hexo"><a href="#选择-Hexo" class="headerlink" title="选择 Hexo"></a>选择 Hexo</h1><p>搭建博客的框架很多，有动态服务器的也有静态文件的，最开始是打算用 Wordpress 的，但花点时间对比一下后，还是选择了 Hexo。以下是我比较关注的点：</p>
+<h2 id="轻量化"><a href="#轻量化" class="headerlink" title="轻量化"></a>轻量化</h2><p>Wordpress 确实功能强大，但是我建立这个博客的核心诉求只是记录一些文字，并不需要它强大的功能和插件系统。</p>
+<p>Hexo 纯静态文件部署，无需搭建服务器，成本很低，如果连域名都不需要的话，可以免费实现。</p>
+<h2 id="专注"><a href="#专注" class="headerlink" title="专注"></a>专注</h2><p>复杂的框架会分散注意力，让人耗费额外的精力，Hexo 则比较纯粹。</p>
+<p>很多搞技术的人做博客容易落入一个怪圈，就是把注意力落在了博客的主题、插件等额外的东西上。当然这个并不能说是一个问题，跟初衷有关。我一开始便一直提醒自己，要把重点放在输出内容上，在博客选型和搭建上，要速战速决，不能耗费过多时间。而实际过程中，虽然一直有这个“初心”的鞭策，我也还差点被主题、插件等吸引了，差点就迷路。。</p>
+<p>Markdown 也是我选择的一个原因。传统所见即所得的编辑器有时会让人消耗额外的精力，Markdown 则让人更专注，我平时都有使用它的习惯。虽然很多框架也有支持 Markdown，但是还是比较重，Hexo 直接就是一个 md 文件，配合 Typora 编辑器和 PicGo 可以很高效率的实现写作、图床、一条龙。</p>
+<h2 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h2><p>关于这个可能有点因人而异，对于普通用户，Hexo 不算特别友好，但是对于前端程序猿而言，确实十分友好的，起码对于我而言，这个算是很容易上手的。基于 Nodejs 的静态化框架，这个以前在项目中就搞过，所以没有学习成本</p>
+<h1 id="平台选择"><a href="#平台选择" class="headerlink" title="平台选择"></a>平台选择</h1><p>理论上，任何一台可以放置静态文件的服务器都可以部署，而目前主流的方案是利用 GitHub 和 Coding 的静态网站服务。当然如果你有自己的专门 VPS，那就更好了，但是上述两个平台已经够用，还免费。再利用 CDN 加速可以达到较好用户体验。</p>
+<p>考虑到境内和境外的网络环境差异，我是选用的 Github + Coding 双线部署方案，能同时兼顾不同的网络环境，具体的配置关键就是 DNS 解析部分，这个通过搜索可以找到答案。</p>
+<h2 id="验证效果"><a href="#验证效果" class="headerlink" title="验证效果"></a>验证效果</h2><p>在我们配置了双线部署后，如何验证效果呢？我用了两个方法：</p>
+<ol>
+<li>在<a href="https://tool.chinaz.com/sitespeed">站长工具网站</a>上分别用“国内网速测试”和“海外网速测试”来验证解析速度和IP等。</li>
+<li>利用科学上网工具，分别测试对域名进行翻墙和不翻墙时的效果，因为工具是用海外的服务器的，如果不是直接访问，则会走 GitHub 的域名解析路径。</li>
+</ol>
+<h1 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h1><h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>如果需要自定义域名的话，需要购买域名，目前国内主流是阿里云和腾讯云等大厂，国外的也可以，这个并没有明显优劣之分。但是差异倒是不少，例如我这个 <a href="https://cybs.site/">cybs.site</a> 的域名，我对比了阿里云、腾讯云和 Godaddy，发现价格还是相差挺大的，其中腾讯云的包年10年价格还比阿里云的少20元，总体各个梯度的价格也是低一些的，所以最后我是在腾讯云上买了个5年的套餐。</p>
+<p>总体而言，就是购买域名时尽量货比三家，选择性价比最高的。</p>
+<h2 id="https-证书"><a href="#https-证书" class="headerlink" title="https 证书"></a>https 证书</h2><p>虽然 https 并不是必须，但是目前的浏览器和搜索引擎对它都有要求，所以建议配置一下。有些服务商证书需要单独购买的，我是购买域名送了一年。当然还有一些免费方案，这个我就没有去折腾，也没必要。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>关于 DNS 解析配置，这里再说明一下，目前网上的大部分文章关于 Coding 的自定义域名解析都是旧版的，新版的基本看不到，具体有需要的可以查看这份<a href="https://help.coding.net/docs/pages/operating/customize.html?_ga=2.259624522.1321409696.1605425217-369513857.1605198400#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">官方文档</a>。需要注意的是，网上文章大部分的 CNAME 配置是直接用网站地址，但是新版的配置系统已经有指定域名地址，需要使用 *.cdn.dnsv1.com 的地址。这个地址是自定义域名指向 DNS 的地址，直接访问是没有内容的。</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>我们的网站会有带www二级域名和不带www的顶级域名，这个提现在统计数据来源上，并且对于搜索引擎而言，它会认为这是两个不同的地址，但明显这不是我们希望看到的。这里我们需要用到301跳转，以保证两个地址都是指向同一内容。</p>
+<h2 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a>CNAME 文件</h2><p>网上很多文章介绍说 GitHub 需要添加一个 CNAME 文件，内容是域名。其实这个是不需要的，<a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方的文档</a>很清楚说明</p>
+<blockquote>
+<p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
+</blockquote>
+<p>就是这个文件会在你点击保存域名配置时自动生成的，而我实践过程中发现也确实如此。所以，网上文章虽然有用，但是官方文档最权威，建议多看官方文档。</p>
+<p> <strong>这里需要特别注意的是，记得在本地的 source 目录下同步一份 CNAME 文件，否则在下次 deploy 后，线上仓库的 CNAME 文件会被同步删除</strong> 。</p>
+<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>静态资源文件，使用 CDN 进行访问加速是非常有效的方案。</p>
+<h2 id="缓存刷新"><a href="#缓存刷新" class="headerlink" title="缓存刷新"></a>缓存刷新</h2><p>我首次更新部署网站时，内容正常访问的，更新内容发布后，GitHub 版本的内容可以看到更新，但是自定义域名的国内线路版本一直无法更新，无论是强制清浏览器缓存还是重新部署都无解。后来我发现原来腾讯云买的域名部署后默认给我开通了 CDN 试用，免费6个月，每月30G。再看一下配置后台，所有的文件统一配置成了30天过期，难怪一直更新不了，原来是30天后才过期，汗😓。</p>
+<p>首先我按照缓存刷新的<a href="https://cloud.tencent.com/document/product/228/6299">文档</a>，将 DNS 的缓存清除，随之就看到了内容的更新。我又按照缓存配置的<a href="https://cloud.tencent.com/document/product/228/41540">文档</a>，将首页index.html过期时间调到5分钟，其它静态文件一天，这样基本就能兼顾内容刷新和缓存加速的需求了。</p>
+<h2 id="jsdelivr"><a href="#jsdelivr" class="headerlink" title="jsdelivr"></a>jsdelivr</h2><p>以上是腾讯云的 CDN 配置使用，但是大部分人需要免费方案，jsdelivr 就是其中一个，教程可以搜索查看。目前在我自己还没启用，主要原因是有送的腾讯云 CDN 还能用，另外它需要结合 GitHub 仓库使用，这个我不确定以后会不会有风险，先观察一段时间。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>暂时遇到和想到的有以上这些点，后续有补充再更新，如果你在使用 Hexo 过程中有哪些疑问或者体会，欢迎进行交流。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>复盘</tag>
+        <tag>心得</tag>
       </tags>
   </entry>
 </search>

@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2k</span>
+            <span class="post-count">2.1k</span>
         </span>
     </span>
 
@@ -148,6 +148,7 @@ var _hmt = _hmt || [];
 <p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
 </blockquote>
 <p>就是这个文件会在你点击保存域名配置时自动生成的，而我实践过程中发现也确实如此。所以，网上文章虽然有用，但是官方文档最权威，建议多看官方文档。</p>
+<p> <strong>这里需要特别注意的是，记得在本地的 source 目录下同步一份 CNAME 文件，否则在下次 deploy 后，线上仓库的 CNAME 文件会被同步删除</strong> 。</p>
 <h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>静态资源文件，使用 CDN 进行访问加速是非常有效的方案。</p>
 <h2 id="缓存刷新"><a href="#缓存刷新" class="headerlink" title="缓存刷新"></a>缓存刷新</h2><p>我首次更新部署网站时，内容正常访问的，更新内容发布后，GitHub 版本的内容可以看到更新，但是自定义域名的国内线路版本一直无法更新，无论是强制清浏览器缓存还是重新部署都无解。后来我发现原来腾讯云买的域名部署后默认给我开通了 CDN 试用，免费6个月，每月30G。再看一下配置后台，所有的文件统一配置成了30天过期，难怪一直更新不了，原来是30天后才过期，汗😓。</p>
 <p>首先我按照缓存刷新的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/6299">文档</a>，将 DNS 的缓存清除，随之就看到了内容的更新。我又按照缓存配置的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/41540">文档</a>，将首页index.html过期时间调到5分钟，其它静态文件一天，这样基本就能兼顾内容刷新和缓存加速的需求了。</p>
