@@ -11,7 +11,7 @@
    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    hexo 建站记录 |  Cybs的小视界
+    MacBook Pro 电池返老还童之旅 |  Cybs的小视界
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -69,7 +69,7 @@ var _hmt = _hmt || [];
     <main class="content on">
       <section class="outer">
   <article
-  id="post-building-hexo-blog"
+  id="post-macbook-battery"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -80,26 +80,22 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  hexo 建站记录
+  MacBook Pro 电池返老还童之旅
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/11/17/building-hexo-blog/" class="article-date">
-  <time datetime="2020-11-17T02:36:37.000Z" itemprop="datePublished">2020-11-17</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-  </div>
-  
+      <a href="/2020/11/30/macbook-battery/" class="article-date">
+  <time datetime="2020-11-30T07:56:41.000Z" itemprop="datePublished">2020-11-30</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.3k</span>
+            <span class="post-count">2.1k</span>
         </span>
     </span>
 
@@ -108,7 +104,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">8 分钟</span>
+            <span class="post-count">7 分钟</span>
         </span>
     </span>
 </div>
@@ -123,41 +119,59 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>你现在看到的这个 blog 是用 Hexo 框架进行搭建的，今天给大家总结一下建站过程中的一些关键点。</p>
-<p>关于用 Hexo 建立博客，搜索一下，你会看到各种详尽的说明分享，我也是通过这种方式来搭建起来这个博客的，所以这里我不打算 step by step 地来介绍如何利用 Hexo 来建立个人博客，有需要的童鞋自行搜索即可。</p>
-<p>这里我主要想总结和记录一下过程中遇到的一些坑或者心得，虽然90%的过程我们根据网上的分享一步步走可以完成，但总会遇到一些特殊的问题点卡你一下，而这些往往是解决问题的关键。</p>
-<h1 id="选择-Hexo"><a href="#选择-Hexo" class="headerlink" title="选择 Hexo"></a>选择 Hexo</h1><p>搭建博客的框架很多，有动态服务器的也有静态文件的，最开始是打算用 Wordpress 的，但花点时间对比一下后，还是选择了 Hexo。以下是我比较关注的点：</p>
-<h2 id="轻量化"><a href="#轻量化" class="headerlink" title="轻量化"></a>轻量化</h2><p>Wordpress 确实功能强大，但是我建立这个博客的核心诉求只是记录一些文字，并不需要它强大的功能和插件系统。</p>
-<p>Hexo 纯静态文件部署，无需搭建服务器，成本很低，如果连域名都不需要的话，可以免费实现。</p>
-<h2 id="专注"><a href="#专注" class="headerlink" title="专注"></a>专注</h2><p>复杂的框架会分散注意力，让人耗费额外的精力，Hexo 则比较纯粹。</p>
-<p>很多搞技术的人做博客容易落入一个怪圈，就是把注意力落在了博客的主题、插件等额外的东西上。当然这个并不能说是一个问题，跟初衷有关。我一开始便一直提醒自己，要把重点放在输出内容上，在博客选型和搭建上，要速战速决，不能耗费过多时间。而实际过程中，虽然一直有这个“初心”的鞭策，我也还差点被主题、插件等吸引了，差点就迷路。。</p>
-<p>Markdown 也是我选择的一个原因。传统所见即所得的编辑器有时会让人消耗额外的精力，Markdown 则让人更专注，我平时都有使用它的习惯。虽然很多框架也有支持 Markdown，但是还是比较重，Hexo 直接就是一个 md 文件，配合 Typora 编辑器和 PicGo 可以很高效率的实现写作、图床、一条龙。</p>
-<h2 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h2><p>关于这个可能有点因人而异，对于普通用户，Hexo 不算特别友好，但是对于前端程序猿而言，确实十分友好的，起码对于我而言，这个算是很容易上手的。基于 Nodejs 的静态化框架，这个以前在项目中就搞过，所以没有学习成本</p>
-<h1 id="平台选择"><a href="#平台选择" class="headerlink" title="平台选择"></a>平台选择</h1><p>理论上，任何一台可以放置静态文件的服务器都可以部署，而目前主流的方案是利用 GitHub 和 Coding 的静态网站服务。当然如果你有自己的专门 VPS，那就更好了，但是上述两个平台已经够用，还免费。再利用 CDN 加速可以达到较好用户体验。</p>
-<p>考虑到境内和境外的网络环境差异，我是选用的 Github + Coding 双线部署方案，能同时兼顾不同的网络环境，具体的配置关键就是 DNS 解析部分，这个通过搜索可以找到答案。</p>
-<h2 id="验证效果"><a href="#验证效果" class="headerlink" title="验证效果"></a>验证效果</h2><p>在我们配置了双线部署后，如何验证效果呢？我用了两个方法：</p>
-<ol>
-<li>在<a target="_blank" rel="noopener" href="https://tool.chinaz.com/sitespeed">站长工具网站</a>上分别用“国内网速测试”和“海外网速测试”来验证解析速度和IP等。</li>
-<li>利用科学上网工具，分别测试对域名进行翻墙和不翻墙时的效果，因为工具是用海外的服务器的，如果不是直接访问，则会走 GitHub 的域名解析路径。</li>
-</ol>
-<h2 id="鸡肋"><a href="#鸡肋" class="headerlink" title="鸡肋"></a>鸡肋</h2><p>网上关于双线部署的教程文章都是基于旧版 Coding 的，在我实际使用时，Coding 已经更新，直接接入了腾讯云 COS，CDN 也是接入了腾讯云，如果未备案的域名，只能接入香港服务器。按理说，这样的设定应该速度会不错的，但是实测后，发现国内速度很慢，站长工具里大片的橙红，发现域名解析很多会跳到德国等欧洲节点，不但没有加速，反而减速了。我折腾了一轮后，改成全部走 GitHub 路径，速度比接入 Coding 要好不少。</p>
-<p>所以，虽然说是有双线方案，最终我现在站点跑的还是 GitHub 的方案。</p>
-<h1 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h1><h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>如果需要自定义域名的话，需要购买域名，目前国内主流是阿里云和腾讯云等大厂，国外的也可以，这个并没有明显优劣之分。但是差异倒是不少，例如我这个 <a href="https://cybs.site/">cybs.site</a> 的域名，我对比了阿里云、腾讯云和 Godaddy，发现价格还是相差挺大的，其中腾讯云的包年10年价格还比阿里云的少20元，总体各个梯度的价格也是低一些的，所以最后我是在腾讯云上买了个5年的套餐。</p>
-<p>总体而言，就是购买域名时尽量货比三家，选择性价比最高的。</p>
-<h2 id="https-证书"><a href="#https-证书" class="headerlink" title="https 证书"></a>https 证书</h2><p>虽然 https 并不是必须，但是目前的浏览器和搜索引擎对它都有要求，所以建议配置一下。有些服务商证书需要单独购买的，我是购买域名送了一年。当然还有一些免费方案，这个我就没有去折腾，也没必要。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>关于 DNS 解析配置，这里再说明一下，目前网上的大部分文章关于 Coding 的自定义域名解析都是旧版的，新版的基本看不到，具体有需要的可以查看这份<a target="_blank" rel="noopener" href="https://help.coding.net/docs/pages/operating/customize.html?_ga=2.259624522.1321409696.1605425217-369513857.1605198400#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">官方文档</a>。需要注意的是，网上文章大部分的 CNAME 配置是直接用网站地址，但是新版的配置系统已经有指定域名地址，需要使用 *.cdn.dnsv1.com 的地址。这个地址是自定义域名指向 DNS 的地址，直接访问是没有内容的。</p>
-<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>我们的网站会有带www二级域名和不带www的顶级域名，这个提现在统计数据来源上，并且对于搜索引擎而言，它会认为这是两个不同的地址，但明显这不是我们希望看到的。这里我们需要用到301跳转，以保证两个地址都是指向同一内容。</p>
-<h2 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a>CNAME 文件</h2><p>网上很多文章介绍说 GitHub 需要添加一个 CNAME 文件，内容是域名。其实这个是不需要的，<a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方的文档</a>很清楚说明</p>
+  <p>前两天自己动手将用了5年的 Macbook Pro 的电池换了，花了一个多小时，换完有种满血复活的感觉。现在给大家记录分享一下，说不定用得着。</p>
+<p>起因是无意中看到文章说作者的 MacBook 电池鼓包了，放在平面上放不平，盖子也合不密，听说还可能有爆炸危险。恰巧我的电脑也出现这种现象一段时间了，之前一直没太在意，因为用电池的场景比较少。但看了这个后，我再去了解相关情况，感觉还是有一定的危险性，加上电池也确实健康度降到80%以下了，于是决定换电池。</p>
+<h2 id="保修"><a href="#保修" class="headerlink" title="保修"></a>保修</h2><p>正常情况下，苹果对于购机1年内的机器可以免费更换电池，有部分人反馈3年内的机器也能免费更换，但明显我的机器已经过保，只能自掏腰包。目前换个电池官方价格好像是一千多接近两千，而且还要去维修点，花费几天，这个成本也挺高，而网上自己买个第三方电池价格只需要两三百，我选择了自己更换。</p>
+<h2 id="笔记本电池的正确打开方式"><a href="#笔记本电池的正确打开方式" class="headerlink" title="笔记本电池的正确打开方式"></a>笔记本电池的正确打开方式</h2><p>根据苹果官方的说法，MacBook 的电池正常可以使用1000个循环周期还能保留至少80%的健康度。也就是电池经历1000次完整的充电放电周期，也还能有峰值电量的8成，这个其实算是比较良心的。</p>
+<p>我平时使用电脑的习惯是，大部分时间都插着电源，单独使用电池的情况比较少，所以虽然用了5年，我的电池循环次数也只有194次，这个算是很少的了。以前以为少用电池能延长电池寿命，但是现在的结果却打脸了。</p>
+<p>按苹果官方说法，导致电池鼓包，大部分情况是因为电池长期充电而不放电。锂电池有个特性，长时间充电会导致活性降低，从而降低使用寿命。正确的做法应该是随用随充，定期使其进行充放电，这样才能最大程度地保持它的活性。当电量在20%-80%之间时，电池的活性最高。</p>
+<p>以上的特性其实也适用于手机等使用锂电池的设备，这也是为什么 iPhone 当电量到达20%时提醒充电，充到80%时提示已经充满。</p>
+<p>当锂电池长期插着充电，会导致锂电池电量长期是满的，活性逐渐降低，慢慢会导致部分电池老化失去活性，反而会加速电池寿命衰减。</p>
+<p>因此，<strong>要让 MacBook 等设备使用的锂电池寿命长些，最佳的方法是定期对电池进行充放电，至少每个月一两次完整的充放电过程，并且不能长期电量过低或者过高</strong>，这样才能保证电池一直活性最高。</p>
+<p>所谓的一个<code>充电周期</code>是这样：</p>
 <blockquote>
-<p>Under “Custom domain”, type your custom domain, then click <strong>Save</strong>. This will create a commit that adds a <em>CNAME</em> file in the root of your publishing source.</p>
+<p>比如，你可能一天使用了 75% 的电量，然后在夜间将设备充满电。如果你次日使用了 25% 的电量，那么总放电量将达到 100%，从而两天累计完成了一个充电周期。</p>
 </blockquote>
-<p>就是这个文件会在你点击保存域名配置时自动生成的，而我实践过程中发现也确实如此。所以，网上文章虽然有用，但是官方文档最权威，建议多看官方文档。</p>
-<p> <strong>这里需要特别注意的是，记得在本地的 source 目录下同步一份 CNAME 文件，否则在下次 deploy 后，线上仓库的 CNAME 文件会被同步删除</strong> 。</p>
-<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>静态资源文件，使用 CDN 进行访问加速是非常有效的方案。前面说到，目前 Coding 是接入了腾讯云的 CDN，但效果很差，我已经弃用，但是下面还是说一下接入过程的坑。</p>
-<h2 id="缓存刷新"><a href="#缓存刷新" class="headerlink" title="缓存刷新"></a>缓存刷新</h2><p>我首次更新部署网站时，内容正常访问的，更新内容发布后，GitHub 版本的内容可以看到更新，但是自定义域名的国内线路版本一直无法更新，无论是强制清浏览器缓存还是重新部署都无解。后来我发现原来腾讯云买的域名部署后默认给我开通了 CDN 试用，免费6个月，每月30G。再看一下配置后台，所有的文件统一配置成了30天过期，难怪一直更新不了，原来是30天后才过期，汗😓。</p>
-<p>首先我按照缓存刷新的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/6299">文档</a>，将 DNS 的缓存清除，随之就看到了内容的更新。我又按照缓存配置的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/41540">文档</a>，将首页index.html过期时间调到5分钟，其它静态文件一天，这样基本就能兼顾内容刷新和缓存加速的需求了。</p>
-<h2 id="jsdelivr"><a href="#jsdelivr" class="headerlink" title="jsdelivr"></a>jsdelivr</h2><p>以上是腾讯云的 CDN 配置使用，但是大部分人需要免费方案，jsdelivr 就是其中一个，教程可以搜索查看。目前在我自己还没启用，主要原因是有送的腾讯云 CDN 还能用，另外它需要结合 GitHub 仓库使用，这个我不确定以后会不会有风险，先观察一段时间。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>暂时遇到和想到的有以上这些点，后续有补充再更新，如果你在使用 Hexo 过程中有哪些疑问或者体会，欢迎进行交流。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/cycle.png" alt="image-20201130150955851"></p>
+<p>当然，电池本身是消耗物，以上方法只能减缓消耗，不能保证不会消耗。我们使用电子设备也是为了享受它给我们带来的便利，如果将心思放在如何减缓电池老化上，会有点本末倒置，大家适当注意即可。</p>
+<p>如果你的 MacBook 是在16年以后买的，在 macOS 10.15.5及以上版本，就增加了电池健康管理功能，其原理就是当电池充电接近100%时减缓充电或者不充电，也就是不充到100%，以增长电池寿命。</p>
+<h2 id="电池选购"><a href="#电池选购" class="headerlink" title="电池选购"></a>电池选购</h2><p>电池这东西毕竟有一定的危险性，尽量别贪便宜买低质量的。虽然原装肯定好，但是现在网上基本买不到原装的，都是第三方厂家生产。为了安全和品质，尽量选择质量和售后有保证的大品牌。建议在 jd 自营商店上购买，我个人是习惯电子类产品在 jd 自营上买，品质、物流和售后等都比较放心。</p>
+<h2 id="电池安装"><a href="#电池安装" class="headerlink" title="电池安装"></a>电池安装</h2><p>下面我给大家记录一下电池安装的过程细节，如果你刚好也需要更换，可以参考一下。</p>
+<h3 id="拆机前"><a href="#拆机前" class="headerlink" title="拆机前"></a>拆机前</h3><p>在更换前，建议先将电量用完，这个主要是防止电池丢弃后电量还过多，对环境和安全有一定危害。</p>
+<p>由于自己动手有一定风险，所以备份好资料数据，以便出问题还可以恢复。</p>
+<p>建议在键盘和屏幕上夹一块布或者纸（我是用厨房用纸），目的是防止拆机过程中电池出渗液等问题，同时更好保护设备。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2691.jpeg" alt="夹一张纸"></p>
+<h3 id="拆螺丝"><a href="#拆螺丝" class="headerlink" title="拆螺丝"></a>拆螺丝</h3><p>MacBook 的螺丝不同部位有长短之分，所以螺丝拆出来记得放在固定的地方，不要搞混，以免装回去时螺丝对不上。螺丝刀必须用特殊的五角和六角螺丝刀，这个买电池时一般会附送。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2689.jpeg" alt="随电池附送的螺丝刀"></p>
+<h3 id="除尘"><a href="#除尘" class="headerlink" title="除尘"></a>除尘</h3><p>拧开所有螺丝，把后盖拆开，你会发现里面充满了灰尘，这时需要先清理一下。如果有易挥发湿巾也可以一起擦一下，但注意别接触金属部位，以防短路。然后有毛刷和气吹等将参与的灰尘污垢清理干净。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2697.jpeg" alt="内部积满灰尘"></p>
+<h3 id="断开电源"><a href="#断开电源" class="headerlink" title="断开电源"></a>断开电源</h3><p>拆机前，先把电源断开，以防短路和出现漏电，这个<strong>非常重要</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2694.JPG" alt="先断电"></p>
+<p>电源接口拔开后的样子：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2704.jpeg" alt="电源接口"></p>
+<h3 id="拆触控板排线"><a href="#拆触控板排线" class="headerlink" title="拆触控板排线"></a>拆触控板排线</h3><p>横跨电池中间的这条是触控板的排线，一定要小心。我们只需要拆中间这端的接口，靠近边缘这个接口不用动，以免出问题。在拆卸电池过程中，也要注意保护这条线。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2705.jpeg" alt="箭头所指是触控板排线"></p>
+<h3 id="拆左右两侧喇叭"><a href="#拆左右两侧喇叭" class="headerlink" title="拆左右两侧喇叭"></a>拆左右两侧喇叭</h3><p>电池左右两侧是喇叭，即下图中右下角那块，这里的螺丝是长短不一的，注意区分保存，以免安装时搞错。可以看到电池鼓包的情况了。</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2708.jpeg" alt="喇叭"></p>
+<h3 id="拆电池"><a href="#拆电池" class="headerlink" title="拆电池"></a>拆电池</h3><p>这个步骤是最麻烦的，非常耗费力气，需要借助电池配送的铲子，我是费尽了九牛二虎之力才把它给铲出来。由于需要花力气，这里必须小心别把其它位置的零件弄坏。</p>
+<p>因为电池下面是胶布贴住的，如果有503溶胶剂的话，这步可以轻松不少。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2710.jpeg" alt="铲除电池"></p>
+<p>铲子都掰弯了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2718.jpeg" alt="铲子"></p>
+<h3 id="清理胶痕"><a href="#清理胶痕" class="headerlink" title="清理胶痕"></a>清理胶痕</h3><p>好不容易把电池卸了下来，接下来是清理参与的胶痕，这里不要用蛮力撕，可以掀起来后卷动，会省力一些。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2712.jpeg" alt="清理胶痕"></p>
+<h3 id="安装电池"><a href="#安装电池" class="headerlink" title="安装电池"></a>安装电池</h3><p>把新电池先放到位置上定位，位置放好后，将底部的胶贴撕掉，按紧电池，使其固定好。然后将电池表面的保护膜撕掉。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2714.jpeg" alt="将电池对齐固定"> </p>
+<h3 id="接上触控板排线"><a href="#接上触控板排线" class="headerlink" title="接上触控板排线"></a>接上触控板排线</h3><p>电池固定好，撕掉胶贴后，小心地将触控板的排线重新装上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2715.jpeg" alt="安装排线"></p>
+<h3 id="拧螺丝"><a href="#拧螺丝" class="headerlink" title="拧螺丝"></a>拧螺丝</h3><p>剩下的就是将喇叭和电池其它的螺丝拧好。</p>
+<h3 id="插上电源插口"><a href="#插上电源插口" class="headerlink" title="插上电源插口"></a>插上电源插口</h3><p>当全部东西都装好后，我们才将电池的插口插好，跟拆的时候相反，拆我们是先拔插口，装则是最后才插。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2716.jpeg" alt="安装电源插口"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>轻轻盖上后盖，先不安装螺丝，先开机，如果正常开机，测试一下触控板，看看刚才拆的过程中有没损坏，再试试键盘按键，查看电池电量，一切正常之后，关机，把后盖安装回去，就大功告成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/IMG_2717.jpeg" alt="开机测试"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Cybs/CDN@main/img/macbook-battery/image-20201202145842483.png" alt="image-20201202145842483"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>实际操作下来，自己安装 MacBook 的电池不算特别难，细心点和力气大点就行，为什么说要力气大？因为铲电池那一步真的费劲！连铲子都差点铲断了。</p>
+<p>记住，一定要先断开电池接口，最后一步安装的也是电池接口。因为带电操作是比较危险的。</p>
  
       <!-- reward -->
       
@@ -228,12 +242,12 @@ var _hmt = _hmt || [];
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://cybs.site/2020/11/17/building-hexo-blog/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://cybs.site/2020/11/30/macbook-battery/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E7%9B%98/" rel="tag">复盘</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacBook/" rel="tag">MacBook</a></li></ul>
 
     </footer>
   </div>
@@ -241,19 +255,10 @@ var _hmt = _hmt || [];
    
   <nav class="article-nav">
     
-      <a href="/2020/11/30/macbook-battery/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            MacBook Pro 电池返老还童之旅
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/11/15/my-first-hexo-blog/" class="article-nav-link">
+      <a href="/2020/11/17/building-hexo-blog/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">我又开始写博客了</div>
+        <div class="article-nav-title">hexo 建站记录</div>
       </a>
     
   </nav>

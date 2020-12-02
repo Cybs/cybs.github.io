@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Cybs的博客</title>
+  <title>Cybs的小视界</title>
   
-  
+  <subtitle>Cybs的个人博客</subtitle>
   <link href="https://cybs.site/atom.xml" rel="self"/>
   
   <link href="https://cybs.site/"/>
-  <updated>2020-11-19T15:13:02.770Z</updated>
+  <updated>2020-12-02T07:17:19.424Z</updated>
   <id>https://cybs.site/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MacBook Pro 电池返老还童之旅</title>
+    <link href="https://cybs.site/2020/11/30/macbook-battery/"/>
+    <id>https://cybs.site/2020/11/30/macbook-battery/</id>
+    <published>2020-11-30T07:56:41.000Z</published>
+    <updated>2020-12-02T07:17:19.424Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前两天自己动手将用了5年的 Macbook Pro 的电池换了，花了一个多小时，换完有种满血复活的感觉。现在给大家记录分享一下，说不定用得着。&lt;/p&gt;
+&lt;p&gt;起因是无意中看到文章说作者的 MacBook</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MacBook" scheme="https://cybs.site/tags/MacBook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 建站记录</title>
     <link href="https://cybs.site/2020/11/17/building-hexo-blog/"/>
     <id>https://cybs.site/2020/11/17/building-hexo-blog/</id>
     <published>2020-11-17T02:36:37.000Z</published>
-    <updated>2020-11-19T15:13:02.770Z</updated>
+    <updated>2020-12-01T17:00:19.179Z</updated>
     
     
       
